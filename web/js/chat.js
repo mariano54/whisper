@@ -2,21 +2,22 @@ var chatRecord;
 var chatBox;
 var chatTimer;
 function receiveChat(message,seconds) {
-//Drop in the chat box
-var newDiv = document.createElement('div');
-newDiv.innerHTML = message;
-chatRecord.appendChild(newDiv);
-//Make the div dissappear
-newDiv.lifeTime = seconds*30;
-var timer = window.setInterval(function() {
-newDiv.lifeTime--;
-if (newDiv.lifeTime <= 30) {
-newDiv.style.opacity = newDiv.lifeTime/30;
-}
-if (newDiv.lifeTime <= 0) {
-chatRecord.removeChild(newDiv);
-window.clearInterval(timer);
-}
+    //Drop in the chat box
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = message;
+    newDiv.style.margin = '10px';
+    chatRecord.appendChild(newDiv);
+    //Make the div dissappear
+    newDiv.lifeTime = seconds*30;
+    var timer = window.setInterval(function() {
+    newDiv.lifeTime--;
+    if (newDiv.lifeTime <= 30) {
+        newDiv.style.opacity = newDiv.lifeTime/30;
+    }
+    if (newDiv.lifeTime <= 0) {
+    chatRecord.removeChild(newDiv);
+    window.clearInterval(timer);
+    }
 },30);
 }
 function chatBoxKeyDown(evt) {
