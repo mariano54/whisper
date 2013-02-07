@@ -8,16 +8,20 @@ function receiveChat(message,seconds) {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = message;
     newDiv.style.margin = '10px';
-    newDiv.className = "chatRecord";
+    newDiv.className = "chatMessage";
     chatRecord.appendChild(newDiv);
 
     //Make the div dissappear
 
     newDiv.lifeTime = seconds*30;
 
+    //When you click on the text, it dissapears
+
     newDiv.addEventListener("mousedown",function() {
         newDiv.lifeTime = 30;
     });
+
+    //When you 
 
     var timer = window.setInterval(function() {
         newDiv.lifeTime--;

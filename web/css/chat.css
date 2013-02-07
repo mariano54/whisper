@@ -13,14 +13,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 }
 
-.chatRecord{
+#chatRecord{
     margin-top: 5%;
     margin-left:5%;
     width:90%;
     margin-right:5%;
-    height: 40px;
     color: white;
     font-size: 25px;
+}
+
+.chatMessage {
+    height: 40px;
 }
 
 #bottomBar{
