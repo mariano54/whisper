@@ -14,6 +14,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 }
 
 #chatRecord{
+    overflow: scroll;
+    height: 80%;
     margin-top: 5%;
     margin-left:5%;
     width:90%;
